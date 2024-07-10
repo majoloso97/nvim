@@ -31,3 +31,7 @@ keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window"
 keymap.set("n", "<leader>g", "<cmd> Neogit<CR>", { desc = "Open Neogit home" })
 keymap.set("n", "<leader>t", "<cmd> term<CR>", { desc = "Move focus to the upper window" })
 keymap.set("n", "<leader>e", "<cmd> Ex<CR>", { desc = "Go to netrw explorer" })
+
+keymap.set("n", "<leader>j", "<cmd> bn<CR>", { desc = "Go to next buffer" })
+keymap.set("n", "<leader>k", "<cmd> bp<CR>", { desc = "Go to prev buffer" })
+keymap.set("n", "<leader>c", "<cmd> bd<CR>", { desc = "Close current buffer" })
