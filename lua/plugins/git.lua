@@ -21,4 +21,5 @@ return {
 		},
 		config = true,
 	},
+	{ "f-person/git-blame.nvim" },
 }
