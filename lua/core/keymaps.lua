@@ -30,7 +30,7 @@ keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window"
 
 keymap.set("n", "<leader>g", "<cmd> Neogit<CR>", { desc = "Open Neogit home" })
 keymap.set("n", "<leader>t", "<cmd> term<CR>", { desc = "Move focus to the upper window" })
-keymap.set("n", "<leader>e", "<cmd> Ex<CR>", { desc = "Go to netrw explorer" })
+keymap.set("n", "<leader>E", "<cmd> Ex<CR>", { desc = "Go to netrw explorer" })
 
 keymap.set("n", "<leader>k", "<cmd> bn<CR>", { desc = "Go to next buffer (up in Telescope open buffers)" })
 keymap.set("n", "<leader>j", "<cmd> bp<CR>", { desc = "Go to prev buffer (down in Telescope open buffers)" })
