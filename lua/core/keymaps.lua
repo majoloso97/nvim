@@ -29,6 +29,8 @@ keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window"
 keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 keymap.set("n", "<leader>g", "<cmd> Neogit<CR>", { desc = "Open Neogit home" })
+keymap.set("n", "<leader>G", "<cmd> GitConflictListQf<CR>", { desc = "Open list of Git Conflicts in Quick fix" })
+
 keymap.set("n", "<leader>t", "<cmd> term<CR>", { desc = "Move focus to the upper window" })
 keymap.set("n", "<leader>E", "<cmd> Ex<CR>", { desc = "Go to netrw explorer" })
 

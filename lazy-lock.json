@@ -8,6 +8,7 @@
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "fidget.nvim": { "branch": "main", "commit": "d855eed8a06531a7e8fd0684889b2943f373c469" },
   "git-blame.nvim": { "branch": "master", "commit": "408d5487d908dfe5d48e5645d8b27ddcc16b11e0" },
+  "git-conflict.nvim": { "branch": "main", "commit": "bfd9fe6fba9a161fc199771d85996236a0d0faad" },
   "gitsigns.nvim": { "branch": "main", "commit": "e9c4187c3774a46df2d086a66cf3a7e6bea4c432" },
   "lazy.nvim": { "branch": "main", "commit": "b02c9eae6a250f98908c146d1dc1a891f5019f0a" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "37a336b653f8594df75c827ed589f1c91d91ff6c" },
