@@ -3,7 +3,7 @@ local Plugins = {
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", opts = {} },
 	-- delete buffers with no change in layout
-	{ "ojroques/nvim-bufdel", opts = { next = "alternate" } },
+	{ "ojroques/nvim-bufdel", opts = { next = "cycle" } },
 }
 
 return Plugins
