@@ -37,7 +37,32 @@ keymap.set("n", "<leader>E", "<cmd> Ex<CR>", { desc = "Go to netrw explorer" })
 keymap.set("n", "<leader>k", "<cmd> bn<CR>", { desc = "Go to next buffer (up in Telescope open buffers)" })
 keymap.set("n", "<leader>j", "<cmd> bp<CR>", { desc = "Go to prev buffer (down in Telescope open buffers)" })
 
+-- Layout keymaps
 keymap.set("n", "<leader>lc", "<cmd> BufDel<CR>", { desc = "Close current buffer (no layout change)" })
 keymap.set("n", "<leader>lk", "<cmd> bd<CR>", { desc = "Close current buffer (layout change)" })
 keymap.set("n", "<leader>lh", "<C-w><C-s>", { desc = "Split layout horizontally" })
 keymap.set("n", "<leader>lv", "<C-w><C-v>", { desc = "Split layout vertically" })
+
+-- Allow optional custom session name passes to autosession cmds
+local session_func = function(cmd)
+	local session_name = vim.fn.input("Session name: ")
+	if session_name == nil or session_name == "" then
+		vim.cmd(cmd)
+	else
+		vim.cmd(cmd .. " " .. session_name)
+	end
+end
+
+-- Session keymaps
+keymap.set("n", "<leader>ss", "<cmd> SessionSearch <CR>", { desc = "[S]earch [S]ession" })
+keymap.set("n", "<leader>Ss", "<cmd> SessionSearch <CR>", { desc = "[S]ession [S]earch" })
+keymap.set("n", "<leader>Sp", "<cmd> SessionPurgeOrphaned <CR>", { desc = "[S]ession [p]urge orphaned" })
+keymap.set("n", "<leader>Sw", function()
+	session_func("SessionSave")
+end, { desc = "[S]ession [w]rite (save)" })
+keymap.set("n", "<leader>Sr", function()
+	session_func("SessionRestore")
+end, { desc = "[S]ession [r]estore" })
+keymap.set("n", "<leader>Sd", function()
+	session_func("SessionDelete")
+end, { desc = "[S]ession [d]elete" })
