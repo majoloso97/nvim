@@ -73,3 +73,5 @@ opt.foldtext = ""
 opt.foldlevelstart = 4
 opt.foldlevel = 99
 opt.foldnestmax = 3
+
+opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
