@@ -217,6 +217,8 @@ return {
 
 			-- You can add other tools here that you want Mason to install
 			-- for you, so that they are available from within Neovim.
+			-- The auto-install with mason-tool-installer (next 3 lines) has to be deactivated
+			-- on termux due to conflicts with termux pkg installation
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
