@@ -30,10 +30,16 @@ return {
 				python = { "isort", "ruff_format" },
 				go = { "gopls" },
 				c = { "clang" },
+				sql = { "sql_formatter" },
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
 				-- javascript = { { "prettierd", "prettier" } },
+			},
+			formatters = {
+				sql_formatter = {
+					prepend_args = { "--config", "/Users/marvin/.config/sql-language-server/.sql-formatter.json" },
+				},
 			},
 		},
 	},
