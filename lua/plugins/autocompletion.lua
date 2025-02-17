@@ -106,8 +106,12 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "path" },
-					{ name = "sql" },
 				},
+			})
+			cmp.setup.filetype("sql", {
+				sources = cmp.config.sources({
+					{ name = "sql" },
+				}),
 			})
 		end,
 	},
