@@ -10,4 +10,19 @@ return {
 			vim.cmd.colorscheme("nightfox")
 		end,
 	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup({
+				"css",
+				"html",
+				"javascript",
+				"typescript",
+				"javascriptreact",
+				"javascript.jsx",
+				"typescriptreact",
+				"typescript.tsx",
+			}, { mode = "background" })
+		end,
+	},
 }
