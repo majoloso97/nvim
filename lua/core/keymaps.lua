@@ -53,6 +53,10 @@ local session_func = function(cmd)
 	end
 end
 
+-- LSP shortcuts
+keymap.set("n", "<leader>Lr", "<cmd> LspRestart<CR>", { desc = "LSP Restart" })
+keymap.set("n", "<leader>Li", "<cmd> LspInfo<CR>", { desc = "LSP Info" })
+
 -- Session keymaps
 keymap.set("n", "<leader>ss", "<cmd> SessionSearch <CR>", { desc = "[S]earch [S]ession" })
 keymap.set("n", "<leader>Ss", "<cmd> SessionSearch <CR>", { desc = "[S]ession [S]earch" })
