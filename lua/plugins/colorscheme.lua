@@ -1,19 +1,38 @@
 return {
-	{ "xiyaowong/transparent.nvim" },
+	-- { "xiyaowong/transparent.nvim" },
 	{
-		-- Change the name of the colorscheme plugin below, and then
-		-- change the command in the config to whatever the name of that colorscheme is.
 		"EdenEast/nightfox.nvim",
 		priority = 1000, -- Make sure to load this before all the other start plugins.
 		init = function()
 			-- Load the colorscheme here.
 			vim.cmd.colorscheme("nightfox")
 		end,
+		opts = {
+			options = {
+				transparent = true,
+			},
+			palettes = {
+				all = {
+					bg0 = "NONE",
+					bg3 = "NONE",
+				},
+			},
+			groups = {
+				all = {
+					Normal = { bg = "NONE" },
+					NormalFloat = { bg = "NONE" },
+					FloatBorder = { bg = "NONE" },
+					Pmenu = { bg = "NONE" },
+					Whitespace = { link = "Conceal" },
+					WinSeparator = { link = "Conceal" },
+				},
+			},
+		},
 	},
 	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup({
+		"catgoose/nvim-colorizer.lua",
+		opts = {
+			filetypes = {
 				"css",
 				"html",
 				"javascript",
@@ -22,7 +41,10 @@ return {
 				"javascript.jsx",
 				"typescriptreact",
 				"typescript.tsx",
-			}, { mode = "background" })
-		end,
+			},
+			options = {
+				display = { mode = "background" },
+			},
+		},
 	},
 }

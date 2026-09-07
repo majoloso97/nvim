@@ -74,4 +74,7 @@ opt.foldlevelstart = 4
 opt.foldlevel = 99
 opt.foldnestmax = 3
 
+-- Concealment for obsidian markdown
+opt.conceallevel = 1
+
 opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
